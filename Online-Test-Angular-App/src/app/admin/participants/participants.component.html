@@ -1,0 +1,25 @@
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+<div class="p-4">
+    <div class="container">
+        <h1 style="text-align: center;">Participants</h1>
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th style="width: 30%"> Name</th>
+            <th style="width: 30%">Score</th>
+            <th style="width: 30%">Time Spent</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of participant">
+            <td>{{user.Name}}</td>
+            <td>{{user.Score}}</td>
+            <td>{{user.TimeSpent}}</td>
+        </tr>
+    </tbody>
+</table>
+    </div>
+</div>
+<link href="//netdna.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />

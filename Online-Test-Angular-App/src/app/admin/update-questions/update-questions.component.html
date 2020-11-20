@@ -1,0 +1,75 @@
+ <div class="row">
+    <div class="col s6 offset-s3">
+      <div style="margin-top: 50px;margin-right: 210px;background-color:rgb(237, 245, 244);"class="card">
+    
+
+        <div class="card-content">
+          <h5 style="text-align: center;">Update Question</h5>
+            <form style="margin-left: 250px;" #registerForm="ngForm" (ngSubmit)="updateQuestion(detail.QnID,detail.Qn,detail.Option1,detail.Option2,detail.Option3,detail.Option4,detail.Answer,detail.Difficulty)">
+                <label >Question</label>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">input</i>
+                  
+                  <input [(ngModel)]="detail.Qn" placeholder="Question"  name="question" class="form-control" id="question">
+                
+                </div>
+              </div>
+              <label >Option1</label>
+              <div class="row">
+                <div class="input-field col s12">
+                    
+                  <i class="material-icons prefix">input</i>
+                  <input [(ngModel)]="detail.Option1"  placeholder="Option1" name="Option1" class="form-control" id="Option1">
+              
+                </div>
+              </div>
+              <label >Option2</label>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">input</i>
+                  <input [(ngModel)]="detail.Option2"  placeholder="Option2" name="Option2" class="form-control" id="Option2">
+           
+                </div>
+              </div>
+              <label >Option3</label>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">input</i>
+                  <input [(ngModel)]="detail.Option3"    placeholder="Option3" name="Option3" class="form-control" id="Option3">
+               
+                </div>
+              </div>
+              <label >Option4</label>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">input</i>
+                  <input [(ngModel)]="detail.Option4"   placeholder="Option4" name="Option4" class="form-control" id="Option4">
+               
+                </div>
+              </div>
+              <label >Answer</label>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">input</i>
+                  <input [(ngModel)]="detail.Answer"  placeholder="Answer" name="Answer" class="form-control" id="Answer">
+        
+                </div>
+              </div>
+              <label >Difficulty Level</label>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">input</i>
+                  <input [(ngModel)]="detail.Difficulty"  placeholder="Difficulty" name="Difficulty" class="form-control" id="Difficulty">
+        
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <button class="btn-large btn-submit" type="submit" [disabled]="!registerForm.valid">Update</button>
+                </div>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div> 

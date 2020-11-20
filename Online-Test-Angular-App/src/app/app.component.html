@@ -1,0 +1,43 @@
+﻿
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" *ngIf="user && quizService.showComponent ">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                
+                <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4MyJk73GZtaKA6M-56pPTDCmly_QtH7sOSw&usqp=CAU">
+            </li>
+       
+            <li class="nav-item">
+                
+                <a  routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Online Test</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a  >Welcome {{user.firstName}}!</a>
+            </li>
+            <li class="nav-item">
+                <a  (click)="logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- main app container -->
+<div  class="app-container" [ngClass]="{ 'bg-light': user }">
+    <alert></alert>
+    <router-outlet ></router-outlet>
+</div>
+
+
+<style>
+    .logo {
+  height: 40px;
+
+ 
+}
+</style>

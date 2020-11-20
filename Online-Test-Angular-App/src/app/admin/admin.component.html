@@ -1,0 +1,59 @@
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+<div class="p-4">
+   
+    <h1 style="text-align: center;">Questions</h1>
+<div class="row">
+    <div class="col-md-0">
+        
+    </div>
+    
+    <div class="col-md-8">
+      <br>
+    
+      <a style="margin-left:10px" routerLink="/admin/add" class="btn btn-success">Add Questions</a>
+ 
+    
+      <a style="margin-left:10px" routerLink="/admin/participants" class="btn btn-success">Participants</a>
+      <a style="margin-left:10px" routerLink="/users" class="btn btn-success">Users</a>
+ 
+      <br>
+
+    </div>
+  </div>
+
+<table class="table table-hover table-dark">
+    <thead >
+        <tr style="text-align: center;">
+            <th >Quetion</th>
+
+            <th>Option 1</th>
+            <th>Option 2</th>
+            <th>Option 3</th>
+            <th>Option 4</th>
+            <th>Answer</th>
+            <th>Difficulty</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let employee of que">
+            <td>{{employee.Qn}}</td>
+      
+            <td>{{employee.Option1}}</td>
+            <td>{{employee.Option2}}</td>
+            <td>{{employee.Option3}}</td>
+            <td>{{employee.Option4}}</td>
+            <td>{{employee.Answer}}</td>
+            <td>{{employee.Difficulty}}</td>
+            <td>
+                <a [routerLink]="['/admin/update', employee.QnID]" class="btn btn-info">Update</a> &nbsp;
+                <button class="btn btn-danger" (click)="deleteQues(employee.QnID)"> Delete</button>
+ 
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+ 
+</div>

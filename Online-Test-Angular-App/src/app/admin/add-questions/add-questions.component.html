@@ -1,0 +1,66 @@
+<div class="row">
+    <div  class="col s6 offset-s3">
+      <div style="margin-top: 50px;margin-right: 210px;background-color:rgb(237, 245, 244);" class="card">
+        <div class="card-content">
+          <h5 style="text-align: center;">Add Question</h5>
+            <form style="margin-left: 250px;"#registerForm="ngForm" (ngSubmit)="OnSubmit(Qn.value,Option1.value,Option2.value,Option3.value,Option4.value,Answer.value,Difficulty.value)">
+              
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">input</i>
+                  <input type="text" name="Name" #Qn ngModel required>
+                  <label>Question</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">input</i>
+                  <input type="text" name="Name" #Option1 ngModel required>
+                  <label>Option1</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">input</i>
+                  <input type="text" name="Name" #Option2 ngModel required>
+                  <label>Option2</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">input</i>
+                  <input type="text" name="Name" #Option3 ngModel required>
+                  <label>Option3</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">input</i>
+                  <input type="text" name="Name" #Option4 ngModel required>
+                  <label>Option4</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">input</i>
+                  <input type="text" name="Name" #Answer ngModel required>
+                  <label>Answer</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">input</i>
+                  <input type="text" name="Name" #Difficulty ngModel required>
+                  <label>Difficulty Level</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <button class="btn-large btn-submit" type="submit" [disabled]="!registerForm.valid">Add</button>
+                </div>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
